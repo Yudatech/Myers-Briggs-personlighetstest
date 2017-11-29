@@ -12,77 +12,96 @@
 
   <!-- My own CSS -->
   <link rel="stylesheet" href="/css/main.css">
-
+  <title>Myers-Briggs personlighetstest</title>
 
 </head>
 
 
 <body>
-  <!-- to do list -->
+  
+  <header>
+      <h1>
+          Myers-Briggs personlighetstest
+        </h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Personlighetstest</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="test.html">Starta Testet
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.16personalities.com/sv/personlighetstyper">Typer
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Om Oss</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <body>
-    <div id="box">
-      <h2>Clinical System</h2>
-      <div class="container">
-        <div class="row">
-          <div class="add-new">
-            <form name="new_patients">
-              <input type="text" name="newPatientsName" id="lists" />
-            </form>
-            <button type="button" class="btn btn-info" id="add">New Patient</button>
-          </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="card index-card">
+        <div class="card-header">
+          Personlighetstest
         </div>
-        <div class="row">
-          <div class="col-7">
-            <h4>Waitting List</h4>
-            <div class="row">
-              <div class="col-6">
-                <div id="Waitting_list"></div>
-              </div>
-              <div class="col-6">
-                <button type="button" class="btn btn-success" id="have_done">Next Patient</button>
-                <br/>
-                <button type="button" class="btn btn-danger" id="emergency">Emergency</button>
-              </div>
-            </div>
+        <div class="card-body">
+          <h4 class="card-title">Instruktioner</h4>
+          <p class="card-text">
+            Syftet med detta personlighetstest är att ge dig en bild av din personlighet, beskriven enligt Jung:s typlära. Det finns
+            naturligtvis ingen ”rätt personlighet”, varje människa är unik och passar in i olika sammanhang på olika bra
+            sätt. Genom att vara medveten om sin personlighetsprofil kan man däremot arbeta mer medvetet med sin egen utveckling.
+            Om man vill.
+          </p>
+          <h6 class="card-title">
+            Genomförande
+          </h6>
+          <p class="card-text">
+            Under övningen beskrivs 24 påståenden eller situationer ställda som motsatsförhållanden eller motpoler. Du ska ställning
+            till vilken ”pol” eller påstående som stämmer bäst med hur du är och känner, och i hur stor utsträckning det
+            är så, genom att placera reglaget någonstans på skalan.
+          </p>
+          <p class="card-text">
+            Känns det som står beskrivet längst ut på skalan verkligen ”som du”, så placerar du alltså reglaget nära det påståendet,
+            närmare ju mer träffsäkert påståendet känns. Känns det som att bägge påståendena kan vara lika beskrivande av
+            hur du är (t.ex. beroende på sammanhangen), placerar du reglaget någonstans mer mitt på skalan. Observera att
+            det inte finns någon exakt ”mitt” på skalan – du måste alltså ta ställning till åt vilken ”pol” det ändå ”lutar”.
+          </p>
+          <p class="card-text">
+            Försök att vara ärlig mot dig själv när du placerar reglaget, gör det utifrån hur du verkligen känner och undvik att tänka
+            på ”hur du borde känna” eller ”hur du skulle vilja vara”. Det finns inget ”rätt” eller ”fel”, men ärlighet i
+            markeringarna ger dig ett större utbyte av övningen.
+          </p>
+          <br> <br>
 
-          </div>
-          <div class="col-5">
-            <h4>Treated</h4>
-            <p id="done"></p>
-          </div>
+          <a href="test.html" class="btn btn-outline-warning float-right">Starta Testet</a>
+          <br><br>
         </div>
-
-
-
-
-
-
-
-
       </div>
 
-
     </div>
-
-  </body>
-  <!-- to do list -->
-
-
-
-  <!-- container -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  </main>
+  <footer>
+    <p>© Hui Su JavaScript Individuell Uppgift 2017</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
     crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
-
-  <!-- My own JavaScript -->
-
+  
   <script src="/js/main.js"></script>
 
 </body>
+
 
 </html>
