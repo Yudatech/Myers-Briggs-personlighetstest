@@ -1,0 +1,55 @@
+h2 {
+  font-family: 'Lato', sans-serif;
+  Font-size: 30px;
+}
+/*Box*/
+#box {
+  background-color: #F4F4F4;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 40px auto;
+  width: 80%;
+}
+.add-new {
+  margin-left: 15px;
+}
+#add {
+  margin-top: -4px;
+  margin-left: 20px;
+}
+h4,
+#inTreating,
+#Waitting_list,
+#done {
+  text-align: left;
+}
+#emergency {
+  margin-top: 20px;
+}
+/*form part */
+form {
+  display: inline-block;
+}
+.scratch {
+  text-decoration: line-through;
+  font-weight: bold;
+  color: #ACACAC;
+}
+/* list part*/
+.row {
+  margin-top: 40px;
+}
+.list {
+  font-family: 'Dosis', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+.list-group {
+  margin-bottom: 5px;
+}
+.btn {
+  width: 160px;
+}
