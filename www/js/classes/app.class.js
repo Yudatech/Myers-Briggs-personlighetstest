@@ -4,6 +4,7 @@ class App extends Base {
         super();
         this.questions = [];
         this.score = [];
+        this.q_and_a_s = []; 
         this.currentQ = 1;
     }
 
@@ -17,9 +18,11 @@ class App extends Base {
     loadQ() {
         return JSON._load('question').then((data) => {
             this.questions = data.questions;
+            for(let question of data.questions){
+              this.q_and_a_s.push(new QandA(question));
+            }
         });
     }
-
 
 
     //Slider
@@ -35,10 +38,7 @@ class App extends Base {
     }
 
     click(element, instances) {
-        if (element.hasClass('slider')) {
-            let slider = $('#myRange').val();
-            $('#demo').innerHRML = slider;
-        }
+       
         if (element.hasClass('next')) {
             this.currentQ++;
             this.render('main');
@@ -49,6 +49,19 @@ class App extends Base {
         }
 
     }
+
+    change(element, instances){
+      if (element.hasClass('slider')) {
+        let value = $('#myRange').val();
+        let index = this.currentQ-1;
+        console.log(value, index);
+        this.score[index] = value;
+        console.log(this.score);
+        this.render('main');
+      }
+    }
+
+   
 
 
 
@@ -75,10 +88,12 @@ class App extends Base {
                   </div>
                 </div>
                 <div id="slidecontainer">
-                  <input type="range" min="0" max="11" value="12" class="slider" id="myRange">
+                  <input type="range" min="0" max="11" value="${this.score[this.currentQ-1]}" class="slider" id="myRange">
                   <br/>
-                  <p class="slider_value">Value:
-                    <span id="demo"></span>
+                  <p class="slider_value">Value: 
+                  <span>
+                  ${this.score[this.currentQ-1]}
+                </span>
                   </p>
                   <div class="row">
                     <div class="col-xs-12 col-6">
@@ -134,5 +149,10 @@ class App extends Base {
       </div>
         `;
     }
+  }
 
-}
+
+
+
+
+

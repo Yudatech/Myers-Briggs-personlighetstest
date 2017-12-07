@@ -194,7 +194,14 @@
         "id": 24
       }
     ],
-    "score": [],
+    "score": [
+      null,
+      null,
+      null,
+      "11",
+      null,
+      "5"
+    ],
     "currentQ": 6,
     "⚙": "App"
   }
