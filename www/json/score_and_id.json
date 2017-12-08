@@ -200,7 +200,345 @@
       null,
       "11",
       null,
-      "5"
+      "8"
+    ],
+    "q_and_a_s": [
+      {
+        "id": 1,
+        "question": "Det känns bäst när jag kan...",
+        "a1": "hålla mitt mest privata för mig själv",
+        "a2": "dela med mig ganska fritt av mina mest privata tankar och känslor",
+        "score": -1
+      },
+      {
+        "id": 2,
+        "question": "Jag föredrar när diskussioner på möten...",
+        "a1": "får löpa tills ämnet är uttömt",
+        "a2": "respekterar anslagen tid",
+        "score": -1
+      },
+      {
+        "id": 3,
+        "question": "Jag gillar att...",
+        "a1": "analysera situationer, tänka efter",
+        "a2": "uppleva situationer, känna efter",
+        "score": -1
+      },
+      {
+        "id": 4,
+        "question": "Jag gillar...",
+        "a1": "de möjligheter förändringar innebär",
+        "a2": "den säkerhet som stabilitet innebär",
+        "score": -1
+      },
+      {
+        "id": 5,
+        "question": "Jag gillar att...",
+        "a1": "befrämja det rationella inför beslut",
+        "a2": "hjälpa fram andras känslor inför beslut",
+        "score": -1
+      },
+      {
+        "id": 6,
+        "question": "Jag gillar...",
+        "a1": "det fantasifulla och lite overkliga",
+        "a2": "de konkreta detaljerna",
+        "score": -1
+      },
+      {
+        "id": 7,
+        "question": "Jag trivs bäst som...",
+        "a1": "lite tillbakadragen",
+        "a2": "personen i händelsernas centrum",
+        "score": -1
+      },
+      {
+        "id": 8,
+        "question": "Jag tycker bäst om...",
+        "a1": "teorier och abstraktion",
+        "a2": "det konkreta och faktiska",
+        "score": -1
+      },
+      {
+        "id": 9,
+        "question": "Det känns bäst med...",
+        "a1": "egna inre tankar och känslor",
+        "a2": "gemensamma aktiviteter med andra",
+        "score": -1
+      },
+      {
+        "id": 10,
+        "question": "Jag vill bli betraktad som en...",
+        "a1": "tänkande människa",
+        "a2": "kännande människa",
+        "score": -1
+      },
+      {
+        "id": 11,
+        "question": "Jag föredrar att...",
+        "a1": "planera löpande och först när det behövs",
+        "a2": "direkt planera utifrån gissningar och uppskattningar",
+        "score": -1
+      },
+      {
+        "id": 12,
+        "question": "Jag trivs bäst tillsammans med personer som fokuserar på...",
+        "a1": "det logiska",
+        "a2": "känslor",
+        "score": -1
+      },
+      {
+        "id": 13,
+        "question": "Jag tycker bäst om att arbeta med...",
+        "a1": "fria tankar",
+        "a2": "fakta",
+        "score": -1
+      },
+      {
+        "id": 14,
+        "question": "Jag jobbar helst utifrån...",
+        "a1": "rationella resonemang",
+        "a2": "min egen tro och \"magkänsla\"",
+        "score": -1
+      },
+      {
+        "id": 15,
+        "question": "Jag tycker det är bäst om man... ",
+        "a1": "slipper fasta tids­gränser",
+        "a2": "har en tidsplan som man kan följa",
+        "score": -1
+      },
+      {
+        "id": 16,
+        "question": "Jag tycker bäst om...",
+        "a1": "idéer",
+        "a2": "fakta",
+        "score": -1
+      },
+      {
+        "id": 17,
+        "question": "Jag tycker bäst om...",
+        "a1": "att fundera på egen hand",
+        "a2": "intensiva och kreativa möten med andra",
+        "score": -1
+      },
+      {
+        "id": 18,
+        "question": "Jag tycker bäst om när överenskommelser och beslut...",
+        "a1": "sakta växer fram inom gruppen i gruppens takt",
+        "a2": "drivs fram av mig så att jag vet att beslut verkligen tas",
+        "score": -1
+      },
+      {
+        "id": 19,
+        "question": "Jag föredrar...",
+        "a1": "bekanta personer (eller att vara själv)",
+        "a2": "nya bekantskaper",
+        "score": -1
+      },
+      {
+        "id": 20,
+        "question": "Jag föredrar att...",
+        "a1": "ta saker och problem som de kommer",
+        "a2": "försöka förutse och planera",
+        "score": -1
+      },
+      {
+        "id": 21,
+        "question": "Jag tycker bäst om att bli beskriven som en...",
+        "a1": "intuitiv och fantasi­full person",
+        "a2": "noggrann person med koll på faktaunderlaget",
+        "score": -1
+      },
+      {
+        "id": 22,
+        "question": "Jag vill fatta beslut baserat på främst...",
+        "a1": "fakta och logik",
+        "a2": "sunt förnuft och vad som känns rätt",
+        "score": -1
+      },
+      {
+        "id": 23,
+        "question": "Jag tycker bäst om att fatta beslut...",
+        "a1": "utan att diskutera med andra",
+        "a2": "efter att ha kollat av med andras upp­fatt­ningar",
+        "score": -1
+      },
+      {
+        "id": 24,
+        "question": "Jag föredrar...",
+        "a1": "troliga helheter och sammanhang",
+        "a2": "faktiska detaljer och fakta",
+        "score": -1
+      },
+      {
+        "id": 1,
+        "question": "Det känns bäst när jag kan...",
+        "a1": "hålla mitt mest privata för mig själv",
+        "a2": "dela med mig ganska fritt av mina mest privata tankar och känslor",
+        "score": -1
+      },
+      {
+        "id": 2,
+        "question": "Jag föredrar när diskussioner på möten...",
+        "a1": "får löpa tills ämnet är uttömt",
+        "a2": "respekterar anslagen tid",
+        "score": -1
+      },
+      {
+        "id": 3,
+        "question": "Jag gillar att...",
+        "a1": "analysera situationer, tänka efter",
+        "a2": "uppleva situationer, känna efter",
+        "score": -1
+      },
+      {
+        "id": 4,
+        "question": "Jag gillar...",
+        "a1": "de möjligheter förändringar innebär",
+        "a2": "den säkerhet som stabilitet innebär",
+        "score": -1
+      },
+      {
+        "id": 5,
+        "question": "Jag gillar att...",
+        "a1": "befrämja det rationella inför beslut",
+        "a2": "hjälpa fram andras känslor inför beslut",
+        "score": -1
+      },
+      {
+        "id": 6,
+        "question": "Jag gillar...",
+        "a1": "det fantasifulla och lite overkliga",
+        "a2": "de konkreta detaljerna",
+        "score": -1
+      },
+      {
+        "id": 7,
+        "question": "Jag trivs bäst som...",
+        "a1": "lite tillbakadragen",
+        "a2": "personen i händelsernas centrum",
+        "score": -1
+      },
+      {
+        "id": 8,
+        "question": "Jag tycker bäst om...",
+        "a1": "teorier och abstraktion",
+        "a2": "det konkreta och faktiska",
+        "score": -1
+      },
+      {
+        "id": 9,
+        "question": "Det känns bäst med...",
+        "a1": "egna inre tankar och känslor",
+        "a2": "gemensamma aktiviteter med andra",
+        "score": -1
+      },
+      {
+        "id": 10,
+        "question": "Jag vill bli betraktad som en...",
+        "a1": "tänkande människa",
+        "a2": "kännande människa",
+        "score": -1
+      },
+      {
+        "id": 11,
+        "question": "Jag föredrar att...",
+        "a1": "planera löpande och först när det behövs",
+        "a2": "direkt planera utifrån gissningar och uppskattningar",
+        "score": -1
+      },
+      {
+        "id": 12,
+        "question": "Jag trivs bäst tillsammans med personer som fokuserar på...",
+        "a1": "det logiska",
+        "a2": "känslor",
+        "score": -1
+      },
+      {
+        "id": 13,
+        "question": "Jag tycker bäst om att arbeta med...",
+        "a1": "fria tankar",
+        "a2": "fakta",
+        "score": -1
+      },
+      {
+        "id": 14,
+        "question": "Jag jobbar helst utifrån...",
+        "a1": "rationella resonemang",
+        "a2": "min egen tro och \"magkänsla\"",
+        "score": -1
+      },
+      {
+        "id": 15,
+        "question": "Jag tycker det är bäst om man... ",
+        "a1": "slipper fasta tids­gränser",
+        "a2": "har en tidsplan som man kan följa",
+        "score": -1
+      },
+      {
+        "id": 16,
+        "question": "Jag tycker bäst om...",
+        "a1": "idéer",
+        "a2": "fakta",
+        "score": -1
+      },
+      {
+        "id": 17,
+        "question": "Jag tycker bäst om...",
+        "a1": "att fundera på egen hand",
+        "a2": "intensiva och kreativa möten med andra",
+        "score": -1
+      },
+      {
+        "id": 18,
+        "question": "Jag tycker bäst om när överenskommelser och beslut...",
+        "a1": "sakta växer fram inom gruppen i gruppens takt",
+        "a2": "drivs fram av mig så att jag vet att beslut verkligen tas",
+        "score": -1
+      },
+      {
+        "id": 19,
+        "question": "Jag föredrar...",
+        "a1": "bekanta personer (eller att vara själv)",
+        "a2": "nya bekantskaper",
+        "score": -1
+      },
+      {
+        "id": 20,
+        "question": "Jag föredrar att...",
+        "a1": "ta saker och problem som de kommer",
+        "a2": "försöka förutse och planera",
+        "score": -1
+      },
+      {
+        "id": 21,
+        "question": "Jag tycker bäst om att bli beskriven som en...",
+        "a1": "intuitiv och fantasi­full person",
+        "a2": "noggrann person med koll på faktaunderlaget",
+        "score": -1
+      },
+      {
+        "id": 22,
+        "question": "Jag vill fatta beslut baserat på främst...",
+        "a1": "fakta och logik",
+        "a2": "sunt förnuft och vad som känns rätt",
+        "score": -1
+      },
+      {
+        "id": 23,
+        "question": "Jag tycker bäst om att fatta beslut...",
+        "a1": "utan att diskutera med andra",
+        "a2": "efter att ha kollat av med andras upp­fatt­ningar",
+        "score": -1
+      },
+      {
+        "id": 24,
+        "question": "Jag föredrar...",
+        "a1": "troliga helheter och sammanhang",
+        "a2": "faktiska detaljer och fakta",
+        "score": -1
+      }
     ],
     "currentQ": 6,
     "⚙": "App"
