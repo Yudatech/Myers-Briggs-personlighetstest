@@ -4,6 +4,7 @@ let app;
 // Tell jsonflex what classes we expect it to save/load
 JSON._classes(App);
 
+
 // Load json data
 JSON._load('score_and_id.json')
   .then((data) => {
@@ -17,11 +18,20 @@ JSON._load('score_and_id.json')
   })
   .then(() => {
     // Tell the app to render to <main>
-    app.loadQ().then(() => {
+    if(app.q_and_a_s.length>0){
       app.render('main');
-  })
-    
+    }
+
+    else{
+      app.loadQ().then(() => {
+        app.currentQ=app.q_and_a_s[0];
+        app.render('main');
+      });
+    }
+
 });
+
+
 
 
 

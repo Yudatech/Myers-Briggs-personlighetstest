@@ -1,10 +1,10 @@
 class QandA extends Base{
-    constructor(obj) {
+    constructor(question) {
         super();
-        this.id = obj.id;
-        this.question = obj.q;
-        this.a1 = obj.a[0];
-        this.a2 = obj.a[1];
+        this.id = question.id;
+        this.q = question.q;
+        this.a1 = question.a[0];
+        this.a2 = question.a[1];
         this.score = -1;
     }
 
