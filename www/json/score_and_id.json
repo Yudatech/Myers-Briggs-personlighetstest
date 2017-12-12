@@ -13,35 +13,35 @@
         "q": "Jag föredrar när diskussioner på möten...",
         "a1": "får löpa tills ämnet är uttömt",
         "a2": "respekterar anslagen tid",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 3,
         "q": "Jag gillar att...",
         "a1": "analysera situationer, tänka efter",
         "a2": "uppleva situationer, känna efter",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 4,
         "q": "Jag gillar...",
         "a1": "de möjligheter förändringar innebär",
         "a2": "den säkerhet som stabilitet innebär",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 5,
         "q": "Jag gillar att...",
         "a1": "befrämja det rationella inför beslut",
         "a2": "hjälpa fram andras känslor inför beslut",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 6,
         "q": "Jag gillar...",
         "a1": "det fantasifulla och lite overkliga",
         "a2": "de konkreta detaljerna",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 7,
@@ -62,21 +62,21 @@
         "q": "Det känns bäst med...",
         "a1": "egna inre tankar och känslor",
         "a2": "gemensamma aktiviteter med andra",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 10,
         "q": "Jag vill bli betraktad som en...",
         "a1": "tänkande människa",
         "a2": "kännande människa",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 11,
         "q": "Jag föredrar att...",
         "a1": "planera löpande och först när det behövs",
         "a2": "direkt planera utifrån gissningar och uppskattningar",
-        "score": -1
+        "score": "6"
       },
       {
         "id": 12,
@@ -171,7 +171,7 @@
       }
     ],
     "currentQ": {
-      "↻": "$.app.q_and_a_s[1]"
+      "↻": "$.app.q_and_a_s[11]"
     },
     "⚙": "App"
   }

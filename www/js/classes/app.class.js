@@ -11,7 +11,11 @@ class App extends Base {
     // Call parent class method
     super.render(el);
     // Also save the JSON after each render
+    // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
+    // workaround for now let cQ etc..
+    let cQ = this.currentQ;
     JSON._save('score_and_id', { app: this });
+    this.currentQ = cQ;
   }
 
 
@@ -44,8 +48,8 @@ class App extends Base {
 
 
   next() {
-    let nextID;
-    nextID = this.currentQ.id;
+    let nextID = this.currentQ.id;
+    console.log(nextID, this.currentQ)
     nextID++;
     this.currentQ = this.findQbyID(nextID);
     this.render('main');
@@ -77,11 +81,6 @@ class App extends Base {
       this.render('main');
     }
   }
-
-
-
-
-
 
 
   template() {
@@ -140,10 +139,56 @@ class App extends Base {
           <div class="col align-self-center">
             <ul class="pagination   pagination-sm ">
               
-            ${
-      this.html(2) ||
-      '<div class="p-2">&#x1F622 No cats to choose from</div>'
-      }
+            <li class="page-item">
+            <a class="page-link text-success" qid="1" href="#">1</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="2" href="#">2</a>
+            </li>
+              
+            <li class="page-item">
+            <a class="page-link text-success" qid="3" href="#">3</a>
+            </li>
+              
+            <li class="page-item">
+            <a class="page-link text-success" qid="4" href="#">4</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="5" href="#">5</a>
+            </li>
+              
+            <li class="page-item">
+            <a class="page-link text-success" qid="6" href="#">6</a>
+            </li>
+              
+            <li class="page-item">
+            <a class="page-link text-success" qid="7" href="#">7</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="8" href="#">8</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="9" href="#">9</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="10" href="#">10</a>
+            </li>
+              
+            <li class="page-item">
+            <a class="page-link text-success" qid="11" href="#">11</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="12" href="#">12</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="13" href="#">13</a>
+            </li>
+            <li class="page-item">
+            <a class="page-link text-success" qid="14" href="#">1</a>
+            </li>
+              
+
+              
               
     
              
@@ -158,7 +203,7 @@ class App extends Base {
     return `
     <li class="page-item">
     <a class="page-link text-success" qid="${this.q_and_a_s.id}" href="#">${this.q_and_a_s.id}</a>
-  </li>
+    </li>
     `;
   }
 
