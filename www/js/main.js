@@ -2,7 +2,7 @@
 let app;
 
 // Tell jsonflex what classes we expect it to save/load
-JSON._classes(App);
+JSON._classes(App, QandA);
 
 
 // Load json data

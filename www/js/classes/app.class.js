@@ -24,10 +24,11 @@ class App extends Base {
     return JSON._load('question').then((data) => {
       //this.questions = data.questions;
       for (let question of data.questions) {
-        this.q_and_a_s.push(new QandA(question));
+        this.q_and_a_s.push(new QandA(question, this));
       }
     });
   }
+ 
 
   findQbyID(id) {
     for (let q of this.q_and_a_s) {
@@ -98,10 +99,10 @@ class App extends Base {
                 </h4>
                 <div class="row justify-content-between answers">
                   <div class="col-4" id="a1">
-                  ${this.currentQ.a1}
+                  ${this.currentQ.getA1()}
                   </div>
                   <div class="col-4" id="a2">
-                  ${this.currentQ.a2}
+                  ${this.currentQ.getA2()}
                   </div>
                 </div>
                 <div id="slidecontainer">
@@ -138,8 +139,27 @@ class App extends Base {
         <div class="row">
           <div class="col align-self-center">
             <ul class="pagination   pagination-sm ">
-              
-            <li class="page-item">
+            ${this.q_and_a_s.html()}
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+        `;
+  }
+  template2() {
+      return `
+      <li class="page-item">
+      <a class="page-link text-success" qid="${this.currentQ.id}" href="#">${this.currentQ.id}</a>
+      </li>
+      `;
+  }
+
+
+
+}
+
+/* <li class="page-item">
             <a class="page-link text-success" qid="1" href="#">1</a>
             </li>
             <li class="page-item">
@@ -184,32 +204,8 @@ class App extends Base {
             <a class="page-link text-success" qid="13" href="#">13</a>
             </li>
             <li class="page-item">
-            <a class="page-link text-success" qid="14" href="#">1</a>
-            </li>
-              
-
-              
-              
-    
-             
-            </ul>
-          </div>
-        </div>
-  
-      </div>
-        `;
-  }
-  template2() {
-    return `
-    <li class="page-item">
-    <a class="page-link text-success" qid="${this.q_and_a_s.id}" href="#">${this.q_and_a_s.id}</a>
-    </li>
-    `;
-  }
-
-
-
-}
+            <a class="page-link text-success" qid="14" href="#">14</a>
+            </li> */
 
 
 
