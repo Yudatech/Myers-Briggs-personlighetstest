@@ -39,21 +39,18 @@ class App extends Base {
     return null;
   }
 
-  showID() {
-    var idList = [];
-    for (var i = 0; i < this.q_and_a_s.length; ++i) {
-      idList.push(this.q_and_a_s.length[i][id]);
-      return idList;
-    }
-  }
 
 
   next() {
     let nextID = this.currentQ.id;
-    console.log(nextID, this.currentQ)
-    nextID++;
-    this.currentQ = this.findQbyID(nextID);
-    this.render('main');
+    if(nextID<24){
+      nextID++;
+      this.currentQ = this.findQbyID(nextID);
+      this.render('main');
+    }else if(nextID=24){
+      console.log("show result");
+    }
+    
   }
 
 
@@ -98,10 +95,10 @@ class App extends Base {
                   
                 </h4>
                 <div class="row justify-content-between answers">
-                  <div class="col-4" id="a1">
+                  <div class="col-6" id="a1">
                   ${this.currentQ.getA1()}
                   </div>
-                  <div class="col-4" id="a2">
+                  <div class="col-6" id="a2">
                   ${this.currentQ.getA2()}
                   </div>
                 </div>
@@ -128,7 +125,15 @@ class App extends Base {
                       <a href="#" class="btn btn-outline-warning float-right next" >Nästa</a>
                     </div>
                   </div>
-  
+                  <div class="row page">
+                  <div class="col align-self-center">
+                    <ul class="pagination   pagination-sm ">
+                    ${this.q_and_a_s.html()}
+                    </ul>
+                  </div>
+
+
+                </div>
   
   
                 </div>
@@ -136,76 +141,17 @@ class App extends Base {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col align-self-center">
-            <ul class="pagination   pagination-sm ">
-            ${this.q_and_a_s.html()}
-            </ul>
-          </div>
-        </div>
+       
   
       </div>
         `;
   }
-  template2() {
-      return `
-      <li class="page-item">
-      <a class="page-link text-success" qid="${this.currentQ.id}" href="#">${this.currentQ.id}</a>
-      </li>
-      `;
-  }
+  
 
 
 
 }
 
-/* <li class="page-item">
-            <a class="page-link text-success" qid="1" href="#">1</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="2" href="#">2</a>
-            </li>
-              
-            <li class="page-item">
-            <a class="page-link text-success" qid="3" href="#">3</a>
-            </li>
-              
-            <li class="page-item">
-            <a class="page-link text-success" qid="4" href="#">4</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="5" href="#">5</a>
-            </li>
-              
-            <li class="page-item">
-            <a class="page-link text-success" qid="6" href="#">6</a>
-            </li>
-              
-            <li class="page-item">
-            <a class="page-link text-success" qid="7" href="#">7</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="8" href="#">8</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="9" href="#">9</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="10" href="#">10</a>
-            </li>
-              
-            <li class="page-item">
-            <a class="page-link text-success" qid="11" href="#">11</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="12" href="#">12</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="13" href="#">13</a>
-            </li>
-            <li class="page-item">
-            <a class="page-link text-success" qid="14" href="#">14</a>
-            </li> */
 
 
 

@@ -36,13 +36,14 @@ footer {
 }
 .answers {
   width: 100%;
+  padding-top: 40px;
   color: #144575;
 }
 .answers #a1 {
-  padding-left: 0;
+  padding-left: 1vw;
 }
 .answers #a2 {
-  padding-right: 0;
+  padding-right: 1vw;
   text-align: right;
 }
 #slidecontainer {
@@ -88,4 +89,8 @@ footer {
 .progress {
   margin-top: 20px;
   margin-left: 10%;
+}
+.page {
+  margin-left: 45px;
+  margin-top: 40px;
 }
