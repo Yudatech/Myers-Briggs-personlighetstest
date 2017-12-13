@@ -6,7 +6,7 @@ JSON._classes(App, QandA, Result);
 
 
 // Load json data
-JSON._load('score_and_id.json')
+JSON._load('score_and_id')
   .then((data) => {
     // Retrieve the app from JSON
     app = data.app;

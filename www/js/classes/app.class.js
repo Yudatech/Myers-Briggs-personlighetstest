@@ -13,9 +13,9 @@ class App extends Base {
     // Also save the JSON after each render
     // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
     // workaround for now let cQ etc..
-    let cQ = this.currentQ;
+    //let cQ = this.currentQ;
     JSON._save('score_and_id', {app:this});
-    this.currentQ = cQ;
+    //this.currentQ = cQ;
   }
 
 
