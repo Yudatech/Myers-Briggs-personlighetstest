@@ -13,9 +13,9 @@ class App extends Base {
     // Also save the JSON after each render
     // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
     // workaround for now let cQ etc..
-    let cQ = this.currentQ;
-    JSON._save('score_and_id', { app: this });
-    this.currentQ = cQ;
+    //let cQ = this.currentQ;
+    JSON._save('score_and_id', {app:this});
+    //this.currentQ = cQ;
   }
 
 
@@ -43,11 +43,11 @@ class App extends Base {
 
   next() {
     let nextID = this.currentQ.id;
-    if(nextID<24){
+    if(nextID<24){ 
       nextID++;
       this.currentQ = this.findQbyID(nextID);
       this.render('main');
-    }else if(nextID=24){
+    }else if(nextID=24){ 
       console.log("show result");
     }
     
