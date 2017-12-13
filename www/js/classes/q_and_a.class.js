@@ -1,7 +1,6 @@
 class QandA extends Base {
-    constructor(question, app) {
+    constructor(question) {
         super();
-        this.app = app;
         this.id = question.id;
         this.q = question.q;
         this.a1 = question.a[0];

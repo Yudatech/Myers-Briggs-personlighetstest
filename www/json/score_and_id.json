@@ -1,0 +1,82 @@
+{
+  "app": {
+    "q_and_a_s": [
+      {
+        "id": 1,
+        "q": "Det känns bäst när jag kan...",
+        "a1": "hålla mitt mest privata för mig själv",
+        "a2": "dela med mig ganska fritt av mina mest privata tankar och känslor",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 2,
+        "q": "Jag föredrar när diskussioner på möten...",
+        "a1": "får löpa tills ämnet är uttömt",
+        "a2": "respekterar anslagen tid",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 3,
+        "q": "Jag gillar att...",
+        "a1": "analysera situationer, tänka efter",
+        "a2": "uppleva situationer, känna efter",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 4,
+        "q": "Jag gillar...",
+        "a1": "de möjligheter förändringar innebär",
+        "a2": "den säkerhet som stabilitet innebär",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 5,
+        "q": "Jag gillar att...",
+        "a1": "befrämja det rationella inför beslut",
+        "a2": "hjälpa fram andras känslor inför beslut",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 6,
+        "q": "Jag gillar...",
+        "a1": "det fantasifulla och lite overkliga",
+        "a2": "de konkreta detaljerna",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 7,
+        "q": "Jag trivs bäst som...",
+        "a1": "lite tillbakadragen",
+        "a2": "personen i händelsernas centrum",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 8,
+        "q": "Jag tycker bäst om...",
+        "a1": "teorier och abstraktion",
+        "a2": "det konkreta och faktiska",
+        "score": -1,
+        "⚙": "QandA"
+      },
+      {
+        "id": 9,
+        "q": "Det känns bäst med...",
+        "a1": "egna inre tankar och känslor",
+        "a2": "gemensamma aktiviteter med andra",
+        "score": -1,
+        "⚙": "QandA"
+      }
+    ],
+    "currentQ": {
+      "↻": "$.app.q_and_a_s[3]"
+    },
+    "⚙": "App"
+  }
+}

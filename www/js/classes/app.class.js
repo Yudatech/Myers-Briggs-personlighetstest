@@ -24,7 +24,7 @@ class App extends Base {
     return JSON._load('question').then((data) => {
       //this.questions = data.questions;
       for (let question of data.questions) {
-        this.q_and_a_s.push(new QandA(question, this));
+        this.q_and_a_s.push(new QandA(question));
       }
     });
   }
@@ -43,15 +43,16 @@ class App extends Base {
 
   next() {
     let nextID = this.currentQ.id;
-    if(nextID<24){ 
+    if(nextID<this.q_and_a_s.length){ 
       nextID++;
       this.currentQ = this.findQbyID(nextID);
       this.render('main');
-    }else if(nextID=24){ 
+    }else if(nextID=this.q_and_a_s.length){ 
+      this.render('main');
       // check if all the score are larger than 0;
       // calculate score result according to load from two json files
       // render type results according to score 
-      checkAndResult(); 
+      //checkAndResult(); 
                       
     }
     
@@ -118,8 +119,8 @@ class App extends Base {
                     <div class="col-xs-12 col-6">
                       
                       <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / 24 * 100}%" aria-valuenow="${this.currentQ.id / 24 * 100}" aria-valuemin="0"
-                          aria-valuemax="100">${Math.round(this.currentQ.id / 24 * 100)}%</div>
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / this.q_and_a_s.length* 100}%" aria-valuenow="${this.currentQ.id / 24 * 100}" aria-valuemin="0"
+                          aria-valuemax="100">${Math.round(this.currentQ.id / this.q_and_a_s.length * 100)}%</div>
                       </div>
                 
                       <p class="progress_text"></p>
