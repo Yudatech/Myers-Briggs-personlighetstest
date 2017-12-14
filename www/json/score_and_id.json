@@ -75,7 +75,7 @@
       }
     ],
     "currentQ": {
-      "↻": "$.app.q_and_a_s[3]"
+      "↻": "$.app.q_and_a_s[0]"
     },
     "⚙": "App"
   }

@@ -72,6 +72,126 @@
         "gemensamma aktiviteter med andra"
       ],
       "id": 9
+    },
+    {
+      "q": "Jag vill bli betraktad som en...",
+      "a": [
+        "tänkande människa",
+        "kännande människa"
+      ],
+      "id": 10
+    },
+    {
+      "q": "Jag föredrar att...",
+      "a": [
+        "planera löpande och först när det behövs",
+        "direkt planera utifrån gissningar och uppskattningar"
+      ],
+      "id": 11
+    },
+    {
+      "q": "Jag trivs bäst tillsammans med personer som fokuserar på...",
+      "a": [
+        "det logiska",
+        "känslor"
+      ],
+      "id": 12
+    },
+    {
+      "q": "Jag tycker bäst om att arbeta med...",
+      "a": [
+        "fria tankar",
+        "fakta"
+      ],
+      "id": 13
+    },
+    {
+      "q": "Jag jobbar helst utifrån...",
+      "a": [
+        "rationella resonemang",
+        "min egen tro och \"magkänsla\""
+      ],
+      "id": 14
+    },
+    {
+      "q": "Jag tycker det är bäst om man... ",
+      "a": [
+        "slipper fasta tids­gränser",
+        "har en tidsplan som man kan följa"
+      ],
+      "id": 15
+    },
+    {
+      "q": "Jag tycker bäst om...",
+      "a": [
+        "idéer",
+        "fakta"
+      ],
+      "id": 16
+    },
+    {
+      "q": "Jag tycker bäst om...",
+      "a": [
+        "att fundera på egen hand",
+        "intensiva och kreativa möten med andra"
+      ],
+      "id": 17
+    },
+    {
+      "q": "Jag tycker bäst om när överenskommelser och beslut...",
+      "a": [
+        "sakta växer fram inom gruppen i gruppens takt",
+        "drivs fram av mig så att jag vet att beslut verkligen tas"
+      ],
+      "id": 18
+    },
+    {
+      "q": "Jag föredrar...",
+      "a": [
+        "bekanta personer (eller att vara själv)",
+        "nya bekantskaper"
+      ],
+      "id": 19
+    },
+    {
+      "q": "Jag föredrar att...",
+      "a": [
+        "ta saker och problem som de kommer",
+        "försöka förutse och planera"
+      ],
+      "id": 20
+    },
+    {
+      "q": "Jag tycker bäst om att bli beskriven som en...",
+      "a": [
+        "intuitiv och fantasi­full person",
+        "noggrann person med koll på faktaunderlaget"
+      ],
+      "id": 21
+    },
+    {
+      "q": "Jag vill fatta beslut baserat på främst...",
+      "a": [
+        "fakta och logik",
+        "sunt förnuft och vad som känns rätt"
+      ],
+      "id": 22
+    },
+    {
+      "q": "Jag tycker bäst om att fatta beslut...",
+      "a": [
+        "utan att diskutera med andra",
+        "efter att ha kollat av med andras upp­fatt­ningar"
+      ],
+      "id": 23
+    },
+    {
+      "q": "Jag föredrar...",
+      "a": [
+        "troliga helheter och sammanhang",
+        "faktiska detaljer och fakta"
+      ],
+      "id": 24
     }
   ],
   "sumSources": {

@@ -11,7 +11,14 @@ app.use(compression());
 app.use(flexjson);
 app.use(express.static('www'));
 
+// Serve the index.html page on every request that
+// doesn't have a file extension in its url
+// (so that single page apps work on page reload)
+app.get(/^[^\.]*$/, (req, res) => {
+  res.sendFile(__dirname + '/www/index.html');
+});
+
 // Start server
-app.listen(4000, () =>
-  console.log('Webserver listening on port 4000')
+app.listen(8888, () =>
+  console.log('Webserver listening on port 8888')
 );
