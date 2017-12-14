@@ -14,7 +14,7 @@ class App extends Base {
     // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
     // workaround for now let cQ etc..
     //let cQ = this.currentQ;
-    JSON._save('score_and_id', {app:this});
+    JSON._save('score_and_id', { app: this });
     //this.currentQ = cQ;
   }
 
@@ -28,7 +28,7 @@ class App extends Base {
       }
     });
   }
- 
+
 
   findQbyID(id) {
     for (let q of this.q_and_a_s) {
@@ -43,19 +43,19 @@ class App extends Base {
 
   next() {
     let nextID = this.currentQ.id;
-    if(nextID<this.q_and_a_s.length){ 
+    if (nextID < this.q_and_a_s.length) {
       nextID++;
       this.currentQ = this.findQbyID(nextID);
       this.render('main');
-    }else if(nextID=this.q_and_a_s.length){ 
+    } else if (nextID = this.q_and_a_s.length) {
       this.render('main');
       // check if all the score are larger than 0;
       // calculate score result according to load from two json files
       // render type results according to score 
       //checkAndResult(); 
-                      
+
     }
-    
+
   }
 
 
@@ -84,8 +84,6 @@ class App extends Base {
       this.render('main');
     }
   }
-
-
   template() {
     return `
         <div class="container">
@@ -119,7 +117,7 @@ class App extends Base {
                     <div class="col-xs-12 col-6">
                       
                       <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / this.q_and_a_s.length* 100}%" aria-valuenow="${this.currentQ.id / 24 * 100}" aria-valuemin="0"
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / this.q_and_a_s.length * 100}%" aria-valuenow="${this.currentQ.id / 24 * 100}" aria-valuemin="0"
                           aria-valuemax="100">${Math.round(this.currentQ.id / this.q_and_a_s.length * 100)}%</div>
                       </div>
                 
@@ -149,9 +147,10 @@ class App extends Base {
        
   
       </div>
-        `;
-  }
-  
+        `; }
+    
+ 
+
 
 
 

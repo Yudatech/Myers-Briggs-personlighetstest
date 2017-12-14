@@ -26,11 +26,11 @@ class QandA extends Base {
 
     template() {
         return `
-        <li class="page-item">
-        <a class="page-link text-success" qid="${this.id}" href="#">${this.id}</a>
-        </li>
-        `;
-    }
+            <li class="page-item">
+            <a class="page-link text-success" qid="${this.id}" href="#">${this.id}</a>
+            </li>
+            `;
+      }
     
 
 }
