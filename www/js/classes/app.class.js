@@ -101,8 +101,6 @@ class App extends Base {
       this.currentQ.score = value / 1;
       this.render('main');
     }
-
-
   }
 
   groupScore(){
@@ -181,7 +179,7 @@ class App extends Base {
 
                 </div>
                 <div class="row it">
-                     <p class="font-italic">Click "Next" to save your result!</p>
+                     <p class="font-italic">Click "Nästa" to save your result!</p>
                   </div>
   
   

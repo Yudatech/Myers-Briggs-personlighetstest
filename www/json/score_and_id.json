@@ -106,7 +106,7 @@
         "⚙": "QandA"
       },
       {
-        "score": 6,
+        "score": 5,
         "id": 14,
         "q": "Jag jobbar helst utifrån...",
         "a1": "rationella resonemang",
@@ -114,7 +114,7 @@
         "⚙": "QandA"
       },
       {
-        "score": 4,
+        "score": 7,
         "id": 15,
         "q": "Jag tycker det är bäst om man... ",
         "a1": "slipper fasta tids­gränser",
@@ -195,7 +195,7 @@
       }
     ],
     "currentQ": {
-      "↻": "$.app.q_and_a_s[14]"
+      "↻": "$.app.q_and_a_s[13]"
     },
     "finished": 0,
     "sumSources": [],
