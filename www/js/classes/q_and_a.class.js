@@ -1,11 +1,14 @@
 class QandA extends Base {
-    constructor(question) {
+    constructor() {
         super();
-        this.id = question.id;
-        this.q = question.q;
-        this.a1 = question.a[0];
-        this.a2 = question.a[1];
-        this.score = -1;
+    }
+
+    init(config){
+        this.id = config.id;
+        this.q = config.q;
+        this.a1 = config.a[0];
+        this.a2 = config.a[1];
+        this.score=config.score;
     }
     capitalA(a) {
         let A = a.split("");
@@ -23,6 +26,8 @@ class QandA extends Base {
     getA2(){
         return this.capitalA(this.a2);
     }
+
+    
 
     template() {
         return `

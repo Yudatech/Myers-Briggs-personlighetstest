@@ -1,18 +1,14 @@
 class Result extends Base {
-    constructor(sumSources, app) {
+    constructor() {
         super();
-        this.app = app;
-        this.sumSources = [];
     }
 
     // load sumSources from JSON file
-  loadSumSources() {
-    return JSON._load('question').then((data) => {
-      for (let sources of data.sumSources) {
-        this.sumSources.push(new Result(sumSources, this));
-      }
-    });
+    init(config){
+      this.questionIds=config.questionIds;
+      this.score=config.score;
   }
+  
   calResult() {
     let ieResult = [];
     for (let i of introvertExtrovert.questionIds) {

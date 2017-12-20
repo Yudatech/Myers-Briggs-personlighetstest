@@ -5,6 +5,9 @@ class App extends Base {
     //this.questions = [];
     this.q_and_a_s = [];
     this.currentQ = 1;
+    this.finished = 0;
+    this.sumSources=[];
+    this.conditions=[];
   }
 
   render(el) {
@@ -24,10 +27,27 @@ class App extends Base {
     return JSON._load('question').then((data) => {
       //this.questions = data.questions;
       for (let question of data.questions) {
-        this.q_and_a_s.push(new QandA(question));
+        let q_inst = new QandA();
+        q_inst.init(question);
+        this.q_and_a_s.push(q_inst);
       }
+
+      for (let question of data.questions) {
+        let sum_inst = new Result();
+        sum_inst.init(sumSources);
+        this.sumSources.push(sum_inst);
+      }
+
+      for (let resultCondition of data.resultConditions) {
+        let condi_inst = new Result();
+        condi_inst.init(resultConditions);
+        this.conditions.push(condi_inst);
+      }
+
+
     });
   }
+
 
 
   findQbyID(id) {
@@ -48,14 +68,14 @@ class App extends Base {
       this.currentQ = this.findQbyID(nextID);
       this.render('main');
     } else if (nextID = this.q_and_a_s.length) {
-      this.render('main');
+      console.log('result');
+      // this.finished = this.finish();
+      //console.log(this.finished);
       // check if all the score are larger than 0;
       // calculate score result according to load from two json files
       // render type results according to score 
       //checkAndResult(); 
-
     }
-
   }
 
 
@@ -64,26 +84,48 @@ class App extends Base {
 
     if (element.hasClass('next')) {
       let value = $('#myRange').val();
-      this.currentQ.score = value;
+      this.currentQ.score = value / 1;
       this.next();
     }
-
     if (element.hasClass('page-link')) {
       let id = element.attr('qid') / 1;
       this.currentQ = this.findQbyID(id);
       this.render('main');
     }
-
   }
 
   // Slider control
   change(element, instances) {
     if (element.hasClass('slider')) {
       let value = $('#myRange').val();
-      this.currentQ.score = value;
+      this.currentQ.score = value / 1;
       this.render('main');
     }
+
+
   }
+
+  groupScore(){
+   
+
+  }
+
+  findType(){
+
+  }
+
+  // finish(){
+  //   let positive=[];
+  //   for(let i=0; i<this.q_and_a_s.length; i++){
+  //     if(!this.q_and_a_s[i].score==-1){
+  //       positive.push().length;
+
+  //     }
+  //   }
+
+  // }
+
+
   template() {
     return `
         <div class="container">
@@ -117,7 +159,7 @@ class App extends Base {
                     <div class="col-xs-12 col-6">
                       
                       <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / this.q_and_a_s.length * 100}%" aria-valuenow="${this.currentQ.id / 24 * 100}" aria-valuemin="0"
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: ${this.currentQ.id / this.q_and_a_s.length * 100}%" aria-valuenow="${this.currentQ.id / this.q_and_a_s.length * 100}%" aria-valuemin="0"
                           aria-valuemax="100">${Math.round(this.currentQ.id / this.q_and_a_s.length * 100)}%</div>
                       </div>
                 
@@ -129,14 +171,18 @@ class App extends Base {
                     </div>
                   </div>
                   <div class="row page">
+
                   <div class="col align-self-center">
                     <ul class="pagination   pagination-sm ">
                     ${this.q_and_a_s.html()}
                     </ul>
                   </div>
-
+                  
 
                 </div>
+                <div class="row it">
+                     <p class="font-italic">Click "Next" to save your result!</p>
+                  </div>
   
   
                 </div>
@@ -147,9 +193,14 @@ class App extends Base {
        
   
       </div>
-        `; }
-    
- 
+        `;
+  }
+
+  template2() {
+    return `<h1>this is result</h1>`
+  }
+
+
 
 
 

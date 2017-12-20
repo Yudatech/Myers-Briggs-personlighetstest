@@ -35,6 +35,7 @@ footer {
   text-align: center;
 }
 .answers {
+  margin-left: 1vw;
   width: 100%;
   padding-top: 40px;
   color: #144575;
@@ -92,7 +93,17 @@ footer {
   margin-top: 20px;
   margin-left: 10%;
 }
-.page {
-  margin-left: 45px;
-  margin-top: 40px;
+.pagination {
+  margin-top: 20px;
+  margin-left: 1vw;
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  display: flex;
+  flex-wrap: wrap;
+}
+.it {
+  margin-left: 1vw;
+  color: #144575;
 }
