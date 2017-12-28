@@ -8,7 +8,8 @@ class QandA extends Base {
         this.q = config.q;
         this.a1 = config.a[0];
         this.a2 = config.a[1];
-        this.score=config.score;
+        this.score=-1;
+        this.source=null;
     }
     capitalA(a) {
         let A = a.split("");
@@ -27,12 +28,14 @@ class QandA extends Base {
         return this.capitalA(this.a2);
     }
 
-    
+    isFinished(){
+        return this.score == -1? 'warning':'success';
+    }
 
     template() {
         return `
             <li class="page-item">
-            <a class="page-link text-success" qid="${this.id}" href="#">${this.id}</a>
+            <a class="page-link text-${this.isFinished()}" qid="${this.id}" href="#">${this.id}</a>
             </li>
             `;
       }

@@ -2,205 +2,225 @@
   "app": {
     "q_and_a_s": [
       {
-        "score": 4,
         "id": 1,
         "q": "Det känns bäst när jag kan...",
         "a1": "hålla mitt mest privata för mig själv",
         "a2": "dela med mig ganska fritt av mina mest privata tankar och känslor",
+        "score": 3,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": 4,
         "id": 2,
         "q": "Jag föredrar när diskussioner på möten...",
         "a1": "får löpa tills ämnet är uttömt",
         "a2": "respekterar anslagen tid",
+        "score": 9,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": 8,
         "id": 3,
         "q": "Jag gillar att...",
         "a1": "analysera situationer, tänka efter",
         "a2": "uppleva situationer, känna efter",
+        "score": 9,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 9,
         "id": 4,
         "q": "Jag gillar...",
         "a1": "de möjligheter förändringar innebär",
         "a2": "den säkerhet som stabilitet innebär",
+        "score": 3,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 5,
         "q": "Jag gillar att...",
         "a1": "befrämja det rationella inför beslut",
         "a2": "hjälpa fram andras känslor inför beslut",
+        "score": 9,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 4,
         "id": 6,
         "q": "Jag gillar...",
         "a1": "det fantasifulla och lite overkliga",
         "a2": "de konkreta detaljerna",
+        "score": 0,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 7,
         "q": "Jag trivs bäst som...",
         "a1": "lite tillbakadragen",
         "a2": "personen i händelsernas centrum",
+        "score": 11,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": -1,
         "id": 8,
         "q": "Jag tycker bäst om...",
         "a1": "teorier och abstraktion",
         "a2": "det konkreta och faktiska",
+        "score": 4,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       },
       {
-        "score": -1,
         "id": 9,
         "q": "Det känns bäst med...",
         "a1": "egna inre tankar och känslor",
         "a2": "gemensamma aktiviteter med andra",
+        "score": 8,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 10,
         "q": "Jag vill bli betraktad som en...",
         "a1": "tänkande människa",
         "a2": "kännande människa",
+        "score": 8,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 11,
         "q": "Jag föredrar att...",
         "a1": "planera löpande och först när det behövs",
         "a2": "direkt planera utifrån gissningar och uppskattningar",
+        "score": 6,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 12,
         "q": "Jag trivs bäst tillsammans med personer som fokuserar på...",
         "a1": "det logiska",
         "a2": "känslor",
+        "score": 3,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 13,
         "q": "Jag tycker bäst om att arbeta med...",
         "a1": "fria tankar",
         "a2": "fakta",
+        "score": 9,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       },
       {
-        "score": 5,
         "id": 14,
         "q": "Jag jobbar helst utifrån...",
         "a1": "rationella resonemang",
         "a2": "min egen tro och \"magkänsla\"",
+        "score": 9,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 7,
         "id": 15,
         "q": "Jag tycker det är bäst om man... ",
         "a1": "slipper fasta tids­gränser",
         "a2": "har en tidsplan som man kan följa",
+        "score": 8,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": -1,
         "id": 16,
         "q": "Jag tycker bäst om...",
         "a1": "idéer",
         "a2": "fakta",
+        "score": 9,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 17,
         "q": "Jag tycker bäst om...",
         "a1": "att fundera på egen hand",
         "a2": "intensiva och kreativa möten med andra",
+        "score": 9,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 18,
         "q": "Jag tycker bäst om när överenskommelser och beslut...",
         "a1": "sakta växer fram inom gruppen i gruppens takt",
         "a2": "drivs fram av mig så att jag vet att beslut verkligen tas",
+        "score": 9,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 19,
         "q": "Jag föredrar...",
         "a1": "bekanta personer (eller att vara själv)",
         "a2": "nya bekantskaper",
+        "score": 10,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 20,
         "q": "Jag föredrar att...",
         "a1": "ta saker och problem som de kommer",
         "a2": "försöka förutse och planera",
+        "score": 9,
+        "source": "perceptionJudgement",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 21,
         "q": "Jag tycker bäst om att bli beskriven som en...",
         "a1": "intuitiv och fantasi­full person",
         "a2": "noggrann person med koll på faktaunderlaget",
+        "score": 8,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 22,
         "q": "Jag vill fatta beslut baserat på främst...",
         "a1": "fakta och logik",
         "a2": "sunt förnuft och vad som känns rätt",
+        "score": 8,
+        "source": "thinkingFeeling",
         "⚙": "QandA"
       },
       {
-        "score": 6,
         "id": 23,
         "q": "Jag tycker bäst om att fatta beslut...",
         "a1": "utan att diskutera med andra",
         "a2": "efter att ha kollat av med andras upp­fatt­ningar",
+        "score": 8,
+        "source": "introvertExtrovert",
         "⚙": "QandA"
       },
       {
-        "score": 5,
         "id": 24,
         "q": "Jag föredrar...",
         "a1": "troliga helheter och sammanhang",
         "a2": "faktiska detaljer och fakta",
+        "score": 11,
+        "source": "intuitionSensing",
         "⚙": "QandA"
       }
     ],
     "currentQ": {
-      "↻": "$.app.q_and_a_s[13]"
+      "↻": "$.app.q_and_a_s[23]"
     },
-    "finished": 0,
-    "sumSources": [],
-    "conditions": [],
-    "sumSource": [],
     "⚙": "App"
   }
 }

@@ -1,131 +1,152 @@
 class App extends Base {
 
-  constructor() {
-    super();
-    //this.questions = [];
-    this.q_and_a_s = [];
-    this.currentQ = 1;
-    this.finished = 0;
-    this.sumSources=[];
-    this.conditions=[];
-  }
+    constructor() {
+        super();
+        //this.questions = [];
+        this.q_and_a_s = [];
+        this.currentQ = 1;
+    }
 
-  render(el) {
-    // Call parent class method
-    super.render(el);
-    // Also save the JSON after each render
-    // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
-    // workaround for now let cQ etc..
-    //let cQ = this.currentQ;
-    JSON._save('score_and_id', { app: this });
-    //this.currentQ = cQ;
-  }
+    render(el) {
+        // Call parent class method
+        super.render(el);
+        // Also save the JSON after each render
+        // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
+        // workaround for now let cQ etc..
+        //let cQ = this.currentQ;
+        JSON._save('score_and_id', {app: this});
+        //this.currentQ = cQ;
+    }
 
 
-  // load questions from JSON file
-  loadQ() {
-    return JSON._load('question').then((data) => {
-      //this.questions = data.questions;
-      for (let question of data.questions) {
-        let q_inst = new QandA();
-        q_inst.init(question);
-        this.q_and_a_s.push(q_inst);
-      }
+    // load questions from JSON file
+    loadQ() {
+        return JSON._load('question').then((data) => {
+            //this.questions = data.questions;
+            for(let question of data.questions
+    )
+        {
+            let q_inst = new QandA();
+            q_inst.init(question);
+            this.q_and_a_s.push(q_inst);
+        }
 
-      for (let question of data.questions) {
-        let sum_inst = new Result();
-        sum_inst.init(sumSources);
-        this.sumSources.push(sum_inst);
-      }
+        for (let source in data.sumSources) {
+            for (let id of data.sumSources[source].questionIds) {
+                let q = this.findQbyID(id);
+                if (q) {
+                    q.source = source;
+                }
 
-      for (let resultCondition of data.resultConditions) {
-        let condi_inst = new Result();
-        condi_inst.init(resultConditions);
-        this.conditions.push(condi_inst);
-      }
+            }
+        }
+
+    })
+        ;
+    }
+
+
+    findQbyID(id) {
+        for (let q of this.q_and_a_s) {
+            if (id == q.id) {
+                return q;
+            }
+        }
+        return null;
+    }
+
+
+    next() {
+        let nextID = this.currentQ.id;
+        if (nextID < this.q_and_a_s.length) {
+            nextID++;
+            this.currentQ = this.findQbyID(nextID);
+            this.render('main');
+        } else if (nextID = this.q_and_a_s.length) {
+            console.log('result');
+
+
+            if(!this.finish())  {
+                alert("Please finish all the questions");
+                return;
+            }
+            this.sumScore();
+
+        }
+    }
+
+
+    // Pageation
+    click(element, instances) {
+
+        if (element.hasClass('next')) {
+            let value = $('#myRange').val();
+            this.currentQ.score = value / 1;
+            this.next();
+        }
+        if (element.hasClass('page-link')) {
+            let id = element.attr('qid') / 1;
+            this.currentQ = this.findQbyID(id);
+            this.render('main');
+        }
+    }
+
+    // Slider control
+    change(element, instances) {
+        if (element.hasClass('slider')) {
+            let value = $('#myRange').val();
+            this.currentQ.score = value / 1;
+            this.render('main');
+        }
+    }
+
+    sumScore() {
+        let introvertExtrovert = 0;
+        let intuitionSensing = 0;
+        let thinkingFeeling = 0;
+        let perceptionJudgement = 0;
+        for (let q of this.q_and_a_s) {
+            if (q.source == "introvertExtrovert") {
+                introvertExtrovert += q.score;
+            }
+            if (q.source == "perceptionJudgement") {
+                intuitionSensing += q.score;
+            }
+            if (q.source == "thinkingFeeling") {
+                thinkingFeeling += q.score;
+            }
+            if (q.source == "perceptionJudgement") {
+                perceptionJudgement += q.score;
+            }
+        }
+        JSON._load('question').then((data) => {
+            let result = "";
+
+            for(let condition in data.resultConditions){
+                 if(eval(condition)) {
+                     result += data.resultConditions[condition] + ";";
+                 }
+        }
+        alert(result);
 
 
     });
-  }
 
-
-
-  findQbyID(id) {
-    for (let q of this.q_and_a_s) {
-      if (id == q.id) {
-        return q;
-      }
     }
-    return null;
-  }
 
 
-
-  next() {
-    let nextID = this.currentQ.id;
-    if (nextID < this.q_and_a_s.length) {
-      nextID++;
-      this.currentQ = this.findQbyID(nextID);
-      this.render('main');
-    } else if (nextID = this.q_and_a_s.length) {
-      console.log('result');
-      // this.finished = this.finish();
-      //console.log(this.finished);
-      // check if all the score are larger than 0;
-      // calculate score result according to load from two json files
-      // render type results according to score 
-      //checkAndResult(); 
+    finish(){
+        for(let q of this.q_and_a_s) {
+            if (q.score == -1) {
+                    return false;
+            }
+        }
+        return true;
     }
-  }
 
 
-  // Pageation
-  click(element, instances) {
-
-    if (element.hasClass('next')) {
-      let value = $('#myRange').val();
-      this.currentQ.score = value / 1;
-      this.next();
-    }
-    if (element.hasClass('page-link')) {
-      let id = element.attr('qid') / 1;
-      this.currentQ = this.findQbyID(id);
-      this.render('main');
-    }
-  }
-
-  // Slider control
-  change(element, instances) {
-    if (element.hasClass('slider')) {
-      let value = $('#myRange').val();
-      this.currentQ.score = value / 1;
-      this.render('main');
-    }
-  }
-
-  groupScore(){
-   
-
-  }
-
-  findType(){
-
-  }
-
-  // finish(){
-  //   let positive=[];
-  //   for(let i=0; i<this.q_and_a_s.length; i++){
-  //     if(!this.q_and_a_s[i].score==-1){
-  //       positive.push().length;
-
-  //     }
-  //   }
-
-  // }
-
-
-  template() {
-    return `
+    template() {
+        return `
         <div class="container">
         <div class="row">
           <div class="col-12">
@@ -192,14 +213,11 @@ class App extends Base {
   
       </div>
         `;
-  }
+    }
 
-  template2() {
-    return `<h1>this is result</h1>`
-  }
-
-
-
+    template2() {
+        return `<h1>this is result</h1>`
+    }
 
 
 
