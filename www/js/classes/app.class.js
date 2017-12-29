@@ -124,10 +124,14 @@ class App extends Base {
 
             for(let condition in data.resultConditions){
                  if(eval(condition)) {
-                     result += data.resultConditions[condition] + ";";
+                     result += data.resultConditions[condition] + "; </br>";
                  }
+                 
         }
-        alert(result);
+        
+        JSON._save('type.json', {result});
+        window.open("/type.html", "_self");
+
 
 
     });
