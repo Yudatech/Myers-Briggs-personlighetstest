@@ -69,8 +69,12 @@ class App extends Base {
             if(!this.finish())  {
                 alert("Please finish all the questions");
                 return;
+            }else if(confirm("Show result?")){
+                this.sumScore();
+            }else{
+                return;
             }
-            this.sumScore();
+           
 
         }
     }
@@ -124,7 +128,7 @@ class App extends Base {
 
             for(let condition in data.resultConditions){
                  if(eval(condition)) {
-                     result += data.resultConditions[condition] + "; </br>";
+                     result += data.resultConditions[condition] + " </br>";
                  }
                  
         }
