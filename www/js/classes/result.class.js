@@ -3,7 +3,6 @@ class Result extends Base {
         super();
     }
 
-    // load sumSources from JSON file
     init(config){
       this.questionIds=config.questionIds;
       this.score=config.score;

@@ -10,19 +10,13 @@ class App extends Base {
     render(el) {
         // Call parent class method
         super.render(el);
-        // Also save the JSON after each render
-        // seems to be a bug in jsonflex that destroys/corrupts the data it is saving
-        // workaround for now let cQ etc..
-        //let cQ = this.currentQ;
         JSON._save('score_and_id', {app: this});
-        //this.currentQ = cQ;
     }
 
 
     // load questions from JSON file
     loadQ() {
         return JSON._load('question').then((data) => {
-            //this.questions = data.questions;
             for(let question of data.questions
     )
         {
@@ -135,9 +129,6 @@ class App extends Base {
         
         JSON._save('type.json', {result}).then(() =>{window.open("/type.html", "_self");})
         ;
-       
-
-
 
     });
 
