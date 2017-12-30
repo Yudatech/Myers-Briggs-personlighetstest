@@ -224,9 +224,7 @@ class App extends Base {
         `;
     }
 
-    template2() {
-        return `<h1>this is result</h1>`
-    }
+   
 
 
 
