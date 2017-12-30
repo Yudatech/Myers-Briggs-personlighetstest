@@ -133,8 +133,9 @@ class App extends Base {
                  
         }
         
-        JSON._save('type.json', {result});
-        window.open("/type.html", "_self");
+        JSON._save('type.json', {result}).then(() =>{window.open("/type.html", "_self");})
+        ;
+       
 
 
 
